@@ -7,7 +7,7 @@ import "./CustomNavbar.css";
 const CustomNavbar = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary  container-navbar">
-      <Container>
+      <Container className="custom-navbar">
         <Navbar.Brand href="#home" className="brand-navbar">
           Pedagogista
         </Navbar.Brand>

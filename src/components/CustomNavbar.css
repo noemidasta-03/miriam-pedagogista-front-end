@@ -1,6 +1,8 @@
 .brand-navbar {
-  color: black !important;
+  color: black;
 }
 
-.container-navbar {
+.custom-container,
+.custom-navbar {
+  margin: 0;
 }

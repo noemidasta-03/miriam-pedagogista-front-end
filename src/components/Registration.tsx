@@ -1,69 +1,177 @@
-import { Button, Form, Container, Row, Col } from "react-bootstrap";
+import { useState, ChangeEvent, FormEvent } from "react";
+import "./Registration.css";
 
-export default function Registration() {
-  return (
-    <>
-      <Container className="d-flex min-vh-100 flex-column justify-content-center px-3 py-5  container-form">
-        <Row className="justify-content-center w-100">
-          <Col sm={12} md={8} lg={6} xl={4}>
-            <div className="text-center">
-              <h2 className="mt-4 mb-4 text-2xl font-weight-bold text-dark">
-                Sign in to your account
-              </h2>
-            </div>
-
-            <Form action="#" method="POST" className="space-y-4">
-              <Form.Group controlId="email">
-                <Form.Label className="text-sm font-medium text-dark">
-                  Email address
-                </Form.Label>
-                <Form.Control
-                  type="email"
-                  name="email"
-                  required
-                  autoComplete="email"
-                  className="mb-3 rounded-md border border-gray-300 p-2 text-dark"
-                />
-              </Form.Group>
-
-              <Form.Group controlId="password">
-                <div className="d-flex justify-content-between align-items-center">
-                  <Form.Label className="text-sm font-medium text-dark">
-                    Password
-                  </Form.Label>
-                  <a href="#" className="text-primary font-weight-bold">
-                    Forgot password?
-                  </a>
-                </div>
-                <Form.Control
-                  type="password"
-                  name="password"
-                  required
-                  autoComplete="current-password"
-                  className="mb-3 rounded-md border border-gray-300 p-2 text-dark"
-                />
-              </Form.Group>
-
-              <Button
-                type="submit"
-                variant="primary"
-                className="w-100 py-2 mt-3 font-weight-semibold"
-              >
-                Sign in
-              </Button>
-            </Form>
-
-            <div className="mt-4 text-center">
-              <p className="text-sm text-gray-500">
-                Not a member?{" "}
-                <a href="#" className="font-weight-semibold text-primary">
-                  Start a 14 day free trial
-                </a>
-              </p>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </>
-  );
+interface FormData {
+  username: string;
+  email: string;
+  password: string;
+  confirmPassword?: string;
 }
+
+const Registration = () => {
+  const [formData, setFormData] = useState<FormData>({
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const [error, setError] = useState<string>("");
+  const [success, setSuccess] = useState<boolean>(false);
+  const [isLogin, setIsLogin] = useState<boolean>(false);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleRegister = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (formData.password !== formData.confirmPassword) {
+      setError("Le password non corrispondono!");
+      return;
+    }
+
+    setError("");
+    console.log("Registrazione avvenuta con successo!", formData);
+
+    setSuccess(true);
+
+    setTimeout(() => {
+      setSuccess(false);
+      setFormData({
+        username: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
+    }, 3000);
+  };
+
+  const handleLogin = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const savedUsername = localStorage.getItem("username");
+    const savedPassword = localStorage.getItem("password");
+
+    if (
+      savedUsername === formData.username &&
+      savedPassword === formData.password
+    ) {
+      setSuccess(true);
+      setTimeout(() => {
+        setSuccess(false);
+        setFormData({
+          username: "",
+          email: "",
+          password: "",
+          confirmPassword: "",
+        });
+      }, 3000);
+    } else {
+      setError("Username o password errati!");
+    }
+  };
+
+  const toggleForm = () => {
+    setIsLogin(!isLogin);
+    setFormData({
+      username: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
+    setError("");
+  };
+
+  return (
+    <div className="container-form">
+      <div className="form-wrapper">
+        <h2 className="title-form">
+          {isLogin ? "Login" : "Form di Registrazione"}
+        </h2>
+        {error && <p style={{ color: "red" }}>{error}</p>}
+
+        {success && (
+          <p style={{ color: "green" }}>
+            {isLogin
+              ? "Accesso avvenuto con successo!"
+              : "Registrazione avvenuta con successo!"}
+          </p>
+        )}
+
+        <form id="form-style" onSubmit={isLogin ? handleLogin : handleRegister}>
+          <div>
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
+              required
+              className="input-form"
+            />
+          </div>
+          <div>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="input-form"
+              />
+            </div>
+          </div>
+          <div>
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+              className="input-form"
+            />
+          </div>
+          {!isLogin && (
+            <div>
+              <label htmlFor="confirmPassword">Conferma Password:</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                required
+                className="input-form"
+              />
+            </div>
+          )}
+          <div>
+            <button className="button-form-style" type="submit">
+              {isLogin ? "Accedi" : "Registrati"}
+            </button>
+          </div>
+        </form>
+
+        <button className="button-form-style" onClick={toggleForm}>
+          {isLogin
+            ? "Non hai un account? Registrati"
+            : "Hai già un account? Accedi"}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Registration;

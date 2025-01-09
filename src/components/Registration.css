@@ -1,3 +1,96 @@
 .container-form {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* height: 100vh; */
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.title-form {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#form-style {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-form {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-form:focus {
+  outline: none;
+  border-color: blue;
+}
+.button-form-style {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .container-form {
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .form-wrapper {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .title-form {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .input-form {
+    font-size: 14px;
+  }
+
+  .button-form-style {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Media Query per dispositivi di larghezza inferiore a 480px (smartphone) */
+@media screen and (max-width: 480px) {
+  .form-wrapper {
+    padding: 10px;
+  }
+
+  .title-form {
+    font-size: 18px;
+  }
+
+  .input-form {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .button-form-style {
+    font-size: 13px;
+    padding: 8px;
+  }
 }

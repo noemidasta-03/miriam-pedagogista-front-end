@@ -90,6 +90,10 @@ const Registration = () => {
 
   return (
     <div className="container-form">
+      <img
+        className="pedagogic-img"
+        src="https://blog.poesie.com.br/wp-content/uploads/2022/03/simbolo-de-pedagogia.jpg"
+      />
       <div className="form-wrapper">
         <h2 className="title-form">
           {isLogin ? "Login" : "Form di Registrazione"}

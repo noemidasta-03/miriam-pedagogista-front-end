@@ -90,10 +90,17 @@ const Registration = () => {
 
   return (
     <div className="container-form">
-      <img
-        className="pedagogic-img"
-        src="https://blog.poesie.com.br/wp-content/uploads/2022/03/simbolo-de-pedagogia.jpg"
-      />
+      <div>
+        <img
+          style={{
+            height: "80vh",
+            width: "80vh",
+            maxWidth: "100vh",
+            borderRadius: "8px",
+          }}
+          src="https://www.atuttodonna.it/atuttodonna/wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/disegni-sulla-pace-nel-mondo-3.jpg?bwg=1588942989"
+        />
+      </div>
       <div className="form-wrapper">
         <h2 className="title-form">
           {isLogin ? "Login" : "Form di Registrazione"}

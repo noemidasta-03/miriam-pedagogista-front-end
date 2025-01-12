@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "./PedagogistServices.css"; // Importa gli stili per il componente
+import "./PedagogistServices.css";
 
-// Dati sui servizi offerti da un pedagogista
 const services = [
   {
     title: "Consulenza Educativa",
@@ -58,13 +57,16 @@ const services = [
     description:
       "Consulenza per la scelta del percorso scolastico o universitario più adatto.",
   },
+  {
+    title: "Sostegno Psicopedagogico per Adolescenti",
+    description:
+      "Supporto psicopedagogico per adolescenti in fase di crescita, per affrontare le sfide scolastiche, emotive e sociali tipiche dell'adolescenza.",
+  },
 ];
 
-// Componente principale per visualizzare i servizi
 const PedagogistServices = () => {
   const [expandedService, setExpandedService] = useState<number | null>(null);
 
-  // Funzione per gestire l'espansione dei servizi
   const toggleService = (index: any) => {
     setExpandedService(expandedService === index ? null : index);
   };
@@ -77,10 +79,7 @@ const PedagogistServices = () => {
       <div className="services-grid">
         {services.map((service, index) => (
           <div key={index} className="service-card">
-            <div
-              className="service-title"
-              onClick={() => toggleService(index)} // Passiamo l'index qui
-            >
+            <div className="service-title" onClick={() => toggleService(index)}>
               <h3>{service.title}</h3>
             </div>
             <div

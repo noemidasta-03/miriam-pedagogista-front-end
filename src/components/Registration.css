@@ -1,11 +1,24 @@
 .container-form {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  /* height: 100vh; */
-  background-color: #f8f9fa;
   gap: 50px;
   padding: 20px;
+  position: relative;
+}
+
+.container-img-wonderful {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("https://www.atuttodonna.it/atuttodonna/wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/disegni-sulla-pace-nel-mondo-3.jpg?bwg=1588942989");
+  background-repeat: repeat;
+  background-size: 15%;
+  background-position: center;
+  border-radius: 20px;
 }
 
 .form-wrapper {
@@ -14,17 +27,21 @@
   align-items: center;
   height: 80vh;
   max-width: 100vh;
-  width: 80vh;
+  width: 100vh;
   background-color: white;
   border-radius: 8px;
   padding: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
+
 .title-form {
-  font-size: 24px;
+  margin-top: 40px;
+  font-size: 35px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
+
 #form-style {
   margin-bottom: 5px;
   display: block;
@@ -43,6 +60,7 @@
   outline: none;
   border-color: blue;
 }
+
 .button-form-style {
   padding: 12px;
   font-size: 16px;
@@ -50,16 +68,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-/* .pedagogic-img img {
-  height: 70vh;
-  width: 0vh;
-  margin-right: 16px;
-  align-items: center;
-  border-radius: 8px;
-  /* margin: 10px; */
-/* max-width: 100vh;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-} */
+
 @media screen and (max-width: 768px) {
   .container-form {
     justify-content: center;
@@ -85,14 +94,8 @@
     font-size: 14px;
     padding: 10px;
   }
-  .pedagogic-img {
-    width: 100vh;
-    max-width: 90%;
-    height: auto;
-  }
 }
 
-/* Media Query per dispositivi di larghezza inferiore a 480px (smartphone) */
 @media screen and (max-width: 480px) {
   .form-wrapper {
     padding: 10px;
@@ -110,10 +113,5 @@
   .button-form-style {
     font-size: 13px;
     padding: 8px;
-  }
-  .pedagogic-img {
-    width: 80vh;
-    max-width: 100%;
-    height: auto;
   }
 }

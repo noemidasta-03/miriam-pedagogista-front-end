@@ -90,17 +90,10 @@ const Registration = () => {
 
   return (
     <div className="container-form">
-      <div>
-        <img
-          style={{
-            height: "80vh",
-            width: "80vh",
-            maxWidth: "100vh",
-            borderRadius: "8px",
-          }}
-          src="https://www.atuttodonna.it/atuttodonna/wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/disegni-sulla-pace-nel-mondo-3.jpg?bwg=1588942989"
-        />
+      <div className="container-img-wonderful">
+        <div className="image-background" />
       </div>
+
       <div className="form-wrapper">
         <h2 className="title-form">
           {isLogin ? "Login" : "Form di Registrazione"}
@@ -129,18 +122,16 @@ const Registration = () => {
             />
           </div>
           <div>
-            <div>
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="input-form"
-              />
-            </div>
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="input-form"
+            />
           </div>
           <div>
             <label htmlFor="password">Password:</label>

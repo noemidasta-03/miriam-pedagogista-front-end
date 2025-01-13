@@ -9,74 +9,57 @@ const Service: React.FC = () => {
   const services: ServiceType[] = [
     {
       title: "Consulenza Educativa",
-      description:
-        "Supporto per orientamento scolastico, consulenza per genitori e educazione affettiva e relazionale.",
+      description: "Supporto per orientamento scolastico...",
     },
     {
       title: "Interventi Psicopedagogici",
-      description:
-        "Diagnosi e supporto per disturbi dell'apprendimento, difficoltà emotive e comportamentali.",
+      description: "Diagnosi e supporto per disturbi...",
     },
     {
       title: "Progetti di Inclusione Scolastica",
-      description:
-        "Progetti per l'integrazione di studenti con bisogni speciali e disabilità.",
+      description: "Progetti per l'integrazione...",
     },
     {
       title: "Formazione e Aggiornamento Professionale",
-      description:
-        "Corsi e seminari per insegnanti, educatori e genitori su temi educativi e psicopedagogici.",
+      description: "Corsi e seminari per insegnanti...",
     },
     {
       title: "Sostegno alla Genitorialità",
-      description:
-        "Supporto nella gestione della genitorialità e nella cura dei figli con difficoltà educative.",
+      description: "Supporto nella gestione della genitorialità...",
     },
     {
       title: "Interventi Psicoeducativi",
-      description:
-        "Psicoeducazione per il benessere psicologico e l'autoregolazione emotiva.",
+      description: "Psicoeducazione per il benessere psicologico...",
     },
     {
       title: "Laboratori Didattici e Creativi",
-      description:
-        "Laboratori pratici per lo sviluppo cognitivo, emotivo e sociale dei bambini.",
+      description: "Laboratori per lo sviluppo cognitivo...",
     },
     {
       title: "Mediazione Familiare e Scolastica",
-      description:
-        "Mediazione nei conflitti familiari e scolastici per migliorare la comunicazione e risolvere le problematiche.",
+      description: "Mediazione nei conflitti...",
     },
     {
       title: "Progetti di Sostegno all’Autonomia",
-      description:
-        "Percorsi educativi per sviluppare l’autonomia di persone con disabilità o adolescenti.",
+      description: "Percorsi per sviluppare l’autonomia...",
     },
     {
       title: "Supporto a Situazioni di Disagio Sociale",
-      description:
-        "Supporto per minori o giovani adulti in situazioni di disagio sociale o familiare.",
+      description: "Supporto per minori e giovani adulti...",
     },
     {
       title: "Orientamento Scolastico e Universitario",
-      description:
-        "Consulenza per la scelta del percorso scolastico o universitario più adatto.",
+      description: "Consulenza per la scelta del percorso scolastico...",
     },
     {
       title: "Sostegno Psicopedagogico per Adolescenti",
-      description:
-        "Supporto psicopedagogico per adolescenti in fase di crescita, per affrontare le sfide scolastiche, emotive e sociali tipiche dell'adolescenza.",
+      description: "Supporto per affrontare le sfide scolastiche...",
     },
   ];
 
-  const simplifiedServices: ServiceType[] = services.map((service) => ({
-    title: service.title,
-    description: service.description,
-  }));
-
   return (
     <div>
-      {simplifiedServices.map((service, index) => (
+      {services.map((service, index) => (
         <div key={index} className="service-item">
           <h3>{service.title}</h3>
           <p>{service.description}</p>

@@ -9,7 +9,9 @@ const PedagogistServices: React.FC = () => {
         <strong>Servizi</strong>
         <span className="text-style">Offerti:</span>
       </h2>
-      <Service />
+      <div className="card">
+        <Service />
+      </div>
     </div>
   );
 };

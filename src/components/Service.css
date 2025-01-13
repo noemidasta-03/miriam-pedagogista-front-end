@@ -1,0 +1,19 @@
+.background {
+  position: relative;
+
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.bottom-cut {
+  position: absolute;
+
+  bottom: calc(calc(-100vw * sin(3deg))+100vw);
+  height: calc(100vw * sin(3deg));
+  width: 110%;
+
+  transform: rotate(-3deg);
+}

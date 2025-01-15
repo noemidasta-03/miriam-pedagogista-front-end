@@ -1,6 +1,6 @@
 .background {
   position: relative;
-
+  overflow: hidden;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -10,10 +10,9 @@
 
 .bottom-cut {
   position: absolute;
-
-  bottom: calc(calc(-100vw * sin(3deg))+100vw);
+  bottom: calc(5.23vw + -44px);
   height: calc(100vw * sin(3deg));
-  width: 110%;
-
+  width: 150%;
   transform: rotate(-3deg);
+  left: -80px;
 }

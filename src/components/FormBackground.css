@@ -1,0 +1,22 @@
+.container-form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  position: relative;
+}
+
+.container-img-wonderful {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("https://www.atuttodonna.it/atuttodonna/wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/disegni-sulla-pace-nel-mondo-3.jpg?bwg=1588942989");
+  background-repeat: repeat;
+  background-size: 8%;
+  background-position: center;
+  border-radius: 20px;
+}

@@ -4,86 +4,83 @@ import Service from "./Service";
 const PedagogistServices = () => {
   const listServices = [
     {
-      titolo: "Consulenza educativa individuale",
+      titolo: "Consulenza educativa",
       descrizione:
-        "Supporto personalizzato per genitori e famiglie, finalizzato a migliorare le dinamiche educative e di apprendimento nei bambini e adolescenti.",
-      color: "#efc883",
+        "Supporto personalizzato per genitori e famiglie, finalizzato a migliorare le dinamiche educative nei bambini e adolescenti.",
     },
     {
-      titolo: "Sostegno psicopedagogico per bambini con DSA",
+      titolo: "Sostegno psicopedagogico DSA",
       descrizione:
-        "Interventi mirati a supportare bambini con Disturbi Specifici dell'Apprendimento, utilizzando metodologie personalizzate per favorire il loro successo scolastico.",
-      color: "beige",
+        "Interventi per supportare bambini con Disturbi Specifici dell'Apprendimento, utilizzando metodologie personalizzate.",
     },
     {
-      titolo: "Formazione per insegnanti",
+      titolo: "Formazione insegnanti",
       descrizione:
-        "Corsi di aggiornamento per insegnanti su tematiche relative alla gestione della classe, strategie educative inclusive e supporto per studenti con difficoltà.",
-      color: "#efc883",
+        "Corsi di aggiornamento su tematiche relative alla gestione della classe e supporto per studenti con difficoltà.",
     },
     {
-      titolo: "Valutazione delle competenze cognitive e relazionali",
+      titolo: "Valutazione competenze",
       descrizione:
-        "Esame delle capacità cognitive, emotive e sociali di bambini e adolescenti, per individuare eventuali difficoltà e sviluppare interventi mirati.",
-      color: "beige",
+        "Esame delle capacità cognitive, emotive e sociali per individuare difficoltà e sviluppare interventi mirati.",
     },
     {
       titolo: "Sostegno alla genitorialità",
       descrizione:
-        "Consulenza per genitori su come affrontare le difficoltà educative, emotive e comportamentali dei figli, migliorando la comunicazione familiare.",
-      color: "#efc883",
+        "Consulenza per genitori su come affrontare difficoltà educative, emotive e comportamentali dei figli.",
     },
     {
-      titolo: "Supporto educativo per minori a rischio",
+      titolo: "Supporto minori a rischio",
       descrizione:
-        "Interventi educativi e psicologici per bambini e ragazzi in situazioni di vulnerabilità, al fine di prevenire fenomeni di devianza e promuovere il benessere psicologico e sociale.",
-      color: "beige",
+        "Interventi educativi per bambini e ragazzi in situazioni di vulnerabilità, per prevenire fenomeni di devianza.",
     },
     {
-      titolo: "Laboratori di sviluppo socio-emotivo",
+      titolo: "Laboratori socio-emotivi",
       descrizione:
-        "Attività pratiche per bambini e adolescenti mirate a migliorare le competenze relazionali, l'autocontrollo e la gestione delle emozioni.",
-      color: "#efc883",
+        "Attività pratiche per migliorare le competenze relazionali, l'autocontrollo e la gestione delle emozioni.",
     },
     {
-      titolo: "Interventi per difficoltà comportamentali",
+      titolo: "Interventi comportamentali",
       descrizione:
-        "Percorsi di sostegno per bambini e adolescenti con problematiche comportamentali, utilizzando strategie educative mirate a favorire un cambiamento positivo.",
-      color: "beige",
+        "Percorsi di sostegno per bambini e adolescenti con problematiche comportamentali, per un cambiamento positivo.",
     },
     {
-      titolo: "Orientamento scolastico e professionale",
+      titolo: "Orientamento scolastico",
       descrizione:
-        "Consulenza per adolescenti e giovani adulti nella scelta del percorso scolastico o professionale, in base alle attitudini, interessi e abilità personali.",
-      color: "#efc883",
+        "Consulenza per adolescenti e giovani adulti nella scelta del percorso scolastico o professionale in base alle abilità.",
     },
     {
       titolo: "Mediazione familiare",
       descrizione:
-        "Supporto nella gestione e risoluzione di conflitti familiari attraverso un approccio pedagogico che favorisca la comunicazione e la comprensione reciproca.",
-      color: "beige",
+        "Supporto nella gestione e risoluzione di conflitti familiari attraverso un approccio che favorisca la comunicazione reciproca.",
+    },
+    {
+      titolo: "Supporto per ansia e stress",
+      descrizione:
+        "Percorsi di supporto psicologico per la gestione di ansia, stress e altri disagi emotivi legati alla vita quotidiana.",
+    },
+    {
+      titolo: "Educazione sessuale e affettiva",
+      descrizione:
+        "Consulenza educativa per giovani e famiglie su temi relativi alla sessualità, le emozioni e le relazioni interpersonali.",
     },
   ];
 
   return (
-    <div>
-      <h2>
-        <strong>Servizi </strong>
-        <span className="text-style">Offerti:</span>
-      </h2>
-      {listServices.map((listService, index) => {
-        return (
-          <Service
-            titolo={listService.titolo}
-            descrizione={listService.descrizione}
-            index={index}
-            primaryColor={listService.color}
-            secondaryColor={
-              listServices[index + 1] ? listServices[index + 1].color : null
-            }
-          />
-        );
-      })}
+    <div className="home-services-container">
+      <strong>
+        Servizi <span className="text-style">Educativi:</span>
+      </strong>
+      <div className="home-services-list">
+        {listServices.map((listService, index) => {
+          return (
+            <Service
+              titolo={listService.titolo}
+              descrizione={listService.descrizione}
+              index={index}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

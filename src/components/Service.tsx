@@ -3,26 +3,18 @@ interface ServiceProps {
   titolo: string;
   descrizione: string;
   index: number;
-  primaryColor: string;
-  secondaryColor: string | null;
 }
-const Service: React.FC<ServiceProps> = ({
-  titolo,
-  descrizione,
-  index,
-  primaryColor,
-  secondaryColor,
-}) => {
+const Service: React.FC<ServiceProps> = ({ titolo, descrizione, index }) => {
   return (
-    <div className="background" style={{ backgroundColor: primaryColor }}>
-      <div className="info">
-        <h3 className="title">{titolo}</h3>
-        <div className="description">{descrizione}</div>
-      </div>
-      <div
-        className="bottom-cut"
-        style={{ backgroundColor: secondaryColor ?? "" }}
-      ></div>
+    <div key={index} className="service-card">
+      <h3>{titolo}</h3>
+      <p>{descrizione}</p>
+      <button
+        className="service-button"
+        onClick={() => alert(`Dettagli su: ${titolo}`)}
+      >
+        Scopri di più
+      </button>
     </div>
   );
 };

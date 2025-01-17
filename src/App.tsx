@@ -6,6 +6,7 @@ import PedagogistServices from "./components/PedagogistServices";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginForm from "./components/LoginForm";
 import FormBackground from "./components/FormBackground";
+
 import Footer from "./components/Footer";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <CustomNavbar />
+
       <Routes>
         <Route index element={<HomePage />} />
         <Route element={<FormBackground />}>

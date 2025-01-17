@@ -3,12 +3,12 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./CustomNavbar.css";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const CustomNavbar = () => {
   return (
     <div>
-      <Navbar expand="lg" className="bg-body-tertiary  container-navbar">
+      <Navbar expand="lg" className="  container-navbar">
         <Container className="custom-navbar">
           <Navbar.Brand href="#home" className="brand-navbar">
             Pedagogista

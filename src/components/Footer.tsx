@@ -9,7 +9,6 @@ const Footer: React.FC<FooterProps> = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-left">
-          <p>&copy; 2025 MyCompany. All rights reserved.</p>
           <div className="social-links">
             <a
               href="https://www.facebook.com/miriamvassallo8/photos_by?locale=it_IT"
@@ -55,24 +54,7 @@ const Footer: React.FC<FooterProps> = () => {
                 Terms of Service
               </a>
             </li>
-            <li>
-              <a href="mailto:contact@mycompany.com">Contact Us</a>
-            </li>
-            <li>
-              <a href="/faq" target="_blank" rel="noopener noreferrer">
-                FAQ
-              </a>
-            </li>
           </ul>
-          <div className="footer-contact">
-            <p>
-              Contact us:{" "}
-              <a href="miriamvassallo98@gmail.com">
-                miriamvassallo98@gmail.com
-              </a>
-            </p>
-            <p>Via venero,18,Monreale(PA)</p>
-          </div>
         </div>
       </div>
       <Outlet />

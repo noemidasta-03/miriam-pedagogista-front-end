@@ -1,18 +1,56 @@
-.background {
-  position: relative;
-  overflow: hidden;
-  height: 200px;
+.service-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  height: 300px;
 }
 
-.bottom-cut {
-  position: absolute;
-  bottom: calc(5.23vw + -44px);
-  height: calc(100vw * sin(3deg));
-  width: 150%;
-  transform: rotate(-3deg);
-  left: -80px;
+.service-card:hover .service-button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  height: 300px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0 20px 0;
+  flex-grow: 1;
+}
+
+.service-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: flex-start;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.service-button:hover {
+  background-color: #555;
+}
+
+.service-button:focus {
+  outline: none;
 }

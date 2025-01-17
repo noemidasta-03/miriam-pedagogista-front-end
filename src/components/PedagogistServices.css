@@ -1,10 +1,20 @@
-.title-service {
-  margin: 30px;
+.home-services-container {
+  /* width: 100%;
+  max-width: 1400px;*/
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  /* background-color: #5a5a5a; */
 }
 
-.services-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.home-services-container strong {
+  font-size: 2rem;
+  color: #333;
+}
+
+.home-services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }

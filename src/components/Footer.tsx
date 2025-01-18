@@ -9,6 +9,17 @@ const Footer: React.FC<FooterProps> = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-left">
+          <div className="footer-text">
+            <p>Miriam Vassallo - Pedagogista</p>
+            <p>
+              Partita IVA: <strong>numero partita IVA</strong>
+            </p>
+          </div>
+        </div>
+
+        <div className="footer-right">
+          <button className="contact-button">Contattami</button>
+
           <div className="social-links">
             <a
               href="https://www.facebook.com/miriamvassallo8/photos_by?locale=it_IT"
@@ -32,29 +43,6 @@ const Footer: React.FC<FooterProps> = () => {
               LinkedIn
             </a>
           </div>
-        </div>
-
-        <div className="footer-right">
-          <ul className="footer-links">
-            <li>
-              <a
-                href="/privacy-policy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                href="/terms-of-service"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Terms of Service
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
       <Outlet />

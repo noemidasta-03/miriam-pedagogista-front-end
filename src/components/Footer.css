@@ -72,3 +72,7 @@
 .footer-contact a:hover {
   color: #4e4026;
 }
+.contact-button {
+  background-color: #9cba7f;
+  border: none;
+}

@@ -28,7 +28,7 @@ const Footer: React.FC<FooterProps> = () => {
               rel="noopener noreferrer"
               aria-label="Facebook"
             >
-              <FaFacebook size={30} color="#3b5998" />
+              <FaFacebook size={30} color="black" />
             </a>
             <a
               href="https://www.instagram.com/miriaamvaassallo/"
@@ -36,7 +36,7 @@ const Footer: React.FC<FooterProps> = () => {
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <FaInstagram size={30} color="#e4405f" />
+              <FaInstagram size={30} color="black" />
             </a>
             <a
               href="https://linkedin.com"
@@ -44,7 +44,7 @@ const Footer: React.FC<FooterProps> = () => {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <FaLinkedin size={30} color="#0077b5" />
+              <FaLinkedin size={30} color="black" />
             </a>
           </div>
         </div>

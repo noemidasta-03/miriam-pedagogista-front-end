@@ -17,16 +17,17 @@ function App() {
   return (
     <BrowserRouter>
       <CustomNavbar />
+      <div className="page-content-container">
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route element={<FormBackground />}>
+            <Route path="registration" element={<Registration />} />
+            <Route path="login" element={<LoginForm onLogin={handleLogin} />} />
+          </Route>
 
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route element={<FormBackground />}>
-          <Route path="registration" element={<Registration />} />
-          <Route path="login" element={<LoginForm onLogin={handleLogin} />} />
-        </Route>
-
-        <Route path="service" element={<PedagogistServices />} />
-      </Routes>
+          <Route path="service" element={<PedagogistServices />} />
+        </Routes>
+      </div>
 
       <Footer />
     </BrowserRouter>

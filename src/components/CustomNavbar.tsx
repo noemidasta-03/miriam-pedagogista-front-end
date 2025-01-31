@@ -4,11 +4,29 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./CustomNavbar.css";
 import { Outlet } from "react-router-dom";
+import { useState } from "react";
 
 const CustomNavbar = () => {
+  const [lastScroll, setLastScroll] = useState(0);
+  const [showNavbar, setShowNavbar] = useState(true);
+
+  document.addEventListener("scroll", () => {
+    const scrolled = window.scrollY;
+    if (lastScroll > scrolled) {
+      setShowNavbar(true);
+    } else {
+      setShowNavbar(false);
+    }
+    setLastScroll(scrolled);
+  });
   return (
     <div>
-      <Navbar expand="lg" className="  container-navbar">
+      <Navbar
+        expand="lg"
+        className={`  container-navbar ${
+          showNavbar ? "visible" : "not-visible"
+        }`}
+      >
         <Container className="custom-navbar">
           <Navbar.Brand href="#home" className="brand-navbar">
             Pedagogista

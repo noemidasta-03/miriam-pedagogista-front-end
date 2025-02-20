@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 interface FooterProps {}
@@ -19,8 +19,6 @@ const Footer: React.FC<FooterProps> = () => {
         </div>
 
         <div className="footer-right">
-          <button className="contact-button">Contattami</button>
-
           <div className="social-links">
             <a
               href="https://www.facebook.com/miriamvassallo8/photos_by?locale=it_IT"

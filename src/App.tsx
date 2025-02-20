@@ -8,6 +8,7 @@ import LoginForm from "./components/LoginForm";
 import FormBackground from "./components/FormBackground";
 
 import Footer from "./components/Footer";
+import ContactAndBooking from "./components/ContactAndBooking";
 
 function App() {
   const handleLogin = (username: string, password: string) => {
@@ -26,6 +27,7 @@ function App() {
           </Route>
 
           <Route path="service" element={<PedagogistServices />} />
+          <Route path="/contattami" element={<ContactAndBooking />} />
         </Routes>
       </div>
 

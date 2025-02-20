@@ -14,7 +14,7 @@ const HomePage = () => {
           <div className="about-me-content">
             <div id="about-me-img">
               <img
-                src="https://scontent.fpmo4-1.fna.fbcdn.net/v/t39.30808-6/353049860_7238939916132625_2934624560966809619_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zbZleC2oS7kQ7kNvgEfljeV&_nc_zt=23&_nc_ht=scontent.fpmo4-1.fna&_nc_gid=AJrN_ovCcLdOAwslrj_cMiH&oh=00_AYDXe93_pnNYZrgD-BqRLztwmX2IOyZmnrVnrq3UxNtS6w&oe=67A2AFE5"
+                src="https://scontent.ffco3-1.fna.fbcdn.net/v/t39.30808-6/466850481_18036700277464121_4782612542554823438_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UZshaXMonQgQ7kNvgFJIu1s&_nc_oc=Adj0LAvWnjHlUF5rsA0wEPKpsRD-7OJWRrp2cuH0lJi6WRkDj_yY53SBWnwVV4bAd9JBb4xrFQHWHLUoaz0KnS4n&_nc_zt=23&_nc_ht=scontent.ffco3-1.fna&_nc_gid=AHRr5ye8ZN5gkLRRY41IFdo&oh=00_AYBfNNWUKpAdp9bWUG5SsMeV7UtVs7QZbj9qx9gwZbTuow&oe=67BB8727"
                 alt="Miriam Vassallo"
                 className="profile-img"
               />

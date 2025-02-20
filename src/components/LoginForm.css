@@ -1,0 +1,13 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  max-width: 100vh;
+  width: 100vh;
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}

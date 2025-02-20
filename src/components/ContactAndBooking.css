@@ -1,0 +1,123 @@
+.contact-booking-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 20px;
+  border-radius: 12px;
+}
+
+.contact-info {
+  width: 40%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.contact-info a {
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #4aab75;
+}
+
+.booking-form {
+  width: 55%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #d1e7e0;
+  border-radius: 8px;
+
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #4aab75;
+  box-shadow: 0 0 5px rgba(74, 171, 117, 0.5);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #b0d29b;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #3c9a60;
+}
+
+button[type="submit"]:active {
+  background-color: #357c4b;
+}
+
+/* Media Queries per responsività */
+@media screen and (max-width: 768px) {
+  .contact-booking-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .booking-form {
+    width: 80%;
+  }
+}

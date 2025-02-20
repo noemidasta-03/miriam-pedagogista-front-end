@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from "react";
+import "./LoginForm.css";
 
 interface LoginForm {
   onLogin: (username: string, password: string) => void;
@@ -25,10 +26,10 @@ const LoginForm: React.FC<LoginForm> = ({ onLogin }) => {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit} className="login-form">
-        <div className="form-group">
-          <label htmlFor="username">Username</label>
+      <h2 className="title-form">Login</h2>
+      <form id="form-style" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="username">Username:</label>
           <input
             type="text"
             id="username"
@@ -36,10 +37,11 @@ const LoginForm: React.FC<LoginForm> = ({ onLogin }) => {
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Inserisci il tuo username"
             required
+            className="input-form"
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
+        <div>
+          <label htmlFor="password">Password:</label>
           <input
             type="password"
             id="password"
@@ -47,10 +49,11 @@ const LoginForm: React.FC<LoginForm> = ({ onLogin }) => {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Inserisci la tua password"
             required
+            className="input-form"
           />
         </div>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <button type="submit" className="login-btn">
+        <button type="submit" className="button-form-style">
           Login
         </button>
       </form>

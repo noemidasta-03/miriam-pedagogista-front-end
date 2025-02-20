@@ -2,7 +2,7 @@
 .footer {
   background-color: #9cba7f;
   color: #333;
-  padding: 8px;
+  padding: 12px;
   text-align: center;
   position: relative;
   width: 100%;
@@ -21,11 +21,28 @@
 
 .footer-left,
 .footer-right {
-  width: 45%;
+  padding: 0 15px;
+}
+
+.footer-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-text p {
+  margin: 0;
 }
 
 .footer-left {
   text-align: left;
+}
+
+.social-links {
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 .social-links a {
@@ -33,6 +50,8 @@
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
+  height: fit-content;
 }
 
 .social-links a:hover {

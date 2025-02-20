@@ -5,6 +5,7 @@
 .custom-container,
 .custom-navbar {
   margin: 0 20px;
+  max-width: none !important;
 }
 .container-navbar {
   position: fixed;
@@ -12,7 +13,8 @@
   top: 0;
   height: 80px;
   background-color: #9cba7f;
+  z-index: 100;
 }
-.container-navbar,
+/* .container-navbar,
 .visible {
-}
+} */

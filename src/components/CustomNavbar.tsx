@@ -22,7 +22,7 @@ const CustomNavbar = () => {
   return (
     <div>
       <Navbar
-        expand="lg"
+        expand={true}
         className={`  container-navbar ${
           showNavbar ? "visible" : "not-visible"
         }`}
